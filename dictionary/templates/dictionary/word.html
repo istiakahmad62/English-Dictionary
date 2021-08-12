@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+  {% block page_title %}
+    {{ word }}'s Meaning
+  {% endblock %}
+
+  {% block css_file %}
+    <link rel="stylesheet" href="{% static "dictionary/word.css" %}">
+  {% endblock %}
+  
+  {% block content %}
+  <div class="content-box">
+    <h1 id="word" align="left">{{ word }}'s Meaning</h1>
+    <h2>Meaning : {{ meaning }}</h2>
+    {% if synonyms %}
+        <h2>Synonyms : {{ synonyms }}</h2>
+    {% else %}
+        <h2>Sorry! Eat has no synonyms in the API</h2>
+    {% endif %}
+
+    {% if antonyms %}
+        <h2>Antonyms : {{ antonyms }}</h2>
+    {% else %}
+        <h2>Sorry! Eat has no antonyms in the API</h2>
+    {% endif %}
+
+    <a href="{% url "index" %}"><h1 id="back">Back</h1></a>
+  </div>
+
+  {% endblock %}

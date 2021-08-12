@@ -1,0 +1,40 @@
+
+.form{
+  margin: 20rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-box,
+#search-button{
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+#search-box{
+  height: 3.35rem;
+  width: 35rem;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+#search-box:focus{
+  border: 3px solid blue;
+}
+
+#search-button{
+  height: 3.5rem;
+  border: 2px solid green;
+  color: green;
+  background-color: white;
+}
+
+#search-button:hover{
+  color: white;
+  background-color: green;
+}

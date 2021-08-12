@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+  {% block page_title %}
+    English Dictionary
+  {% endblock %}
+
+  {% block css_file %}
+    <link rel="stylesheet" href="{% static "dictionary/index.css" %}">
+  {% endblock %}
+
+  {% block content %}
+    <form class="form" action="{% url "word" %}" method="POST">
+      {% csrf_token %}
+      <input id="search-box" type="search" name="word" placeholder="Input Your Word Here" aria-label="Search">
+      <button id="search-button" type="submit">Search</button>
+    </form>
+  {% endblock %}
